@@ -22,25 +22,20 @@ This platform enables you to:
 
 ## Table of Contents
 
-- [Features](#-features)
-- [Quick Start](#-quick-start)
+- [Features](#features)
+- [Quick Start](#quick-start)
   - [1. Install Dependencies](#1-install-dependencies)
   - [2. Run the Training System](#2-run-the-training-system)
   - [3. Test Available Games](#3-test-available-games)
-- [Example Usage: Breakout Training](#-example-usage-breakout-training)
+- [Example Usage: Breakout Training](#example-usage-breakout-training)
   - [Training Process](#training-process)
   - [Training Progress](#training-progress)
-  - [Performance Metrics](#performance-metrics)
   - [Model Analysis](#model-analysis)
-- [Media Gallery](#-media-gallery)
+- [Media Gallery](#media-gallery)
   - [Generated Visualizations](#generated-visualizations)
   - [Video Comparisons](#video-comparisons)
-  - [Sample Outputs](#sample-outputs)
-- [Project Structure](#-project-structure)
-- [Supported Games](#-supported-games)
-  - [Easy Games](#easy-games-good-for-beginners)
-  - [Medium Games](#medium-games)
-  - [Hard Games](#hard-games-advanced)
+- [Project Structure](#project-structure)
+- [Supported Games](#supported-games)
 - [Configuration](#configuration)
   - [Game-Specific Settings](#game-specific-settings)
   - [Training Parameters](#training-parameters)
@@ -51,13 +46,13 @@ This platform enables you to:
   - [Checkpoint System](#checkpoint-system)
   - [Resume Training](#resume-training)
 - [Usage Examples](#usage-examples)
-  - [Training](#training)
-  - [Playing](#playing)
-  - [Visualization](#visualization)
+  - [Training](#usage-examples-training)
+  - [Playing](#usage-examples-playing)
+  - [Visualization](#usage-examples-visualization)
 - [Advanced Usage](#advanced-usage)
   - [Custom Game Configuration](#custom-game-configuration)
-  - [Training Multiple Games](#training-multiple-games)
-  - [Environment Setup](#environment-setup)
+
+
 
 ## Features
 
@@ -157,19 +152,31 @@ The training process generates various visualizations in the `Media/` directory:
 
 #### Neural Network Analysis
 
-**Filter Visualization**  
-![Conv1 Filters](Media/Breakout_conv1_filters.png)
+**Filter Evolution**  
+![Filter Evolution](Media/filter_evolution.gif)
 
 **Layer Activations**  
 - **Conv1 Activations**  
-  ![Conv1 Activations](Media/conv1_activations.png)  
+  ![Conv1 Activations](Media/conv1_activations.png)
+  Given a single Breakout frame, these four feature‑maps show where the first‑layer filters “light up.” Brighter regions mean stronger responses:  
+  - Channel 16: a horizontal edge detector focusing on the top brick border and paddle area.  
+  - Channel 6: a combination filter firing on long horizontal lines plus small high‑contrast ball blobs.  
+  - Channel 27: a vertical‑edge detector sensitive to side walls and ball location.  
+  - Channel 11: a region detector that highlights the paddle zone.  
 - **Conv2 Activations**  
-  ![Conv2 Activations](Media/conv2_activations.png)  
+  ![Conv2 Activations](Media/conv2_activations.png)
+  After two conv layers (16×16 maps), these channels compose simple edges into larger motifs:  
+  - Channel 34: walls plus object patterns.  
+  - Channel 13: fused horizontal line + blob detection.  
+  - Channel 39: an asymmetric wall detector (stronger on right side).  
+  - Channel 27: uniform “wall‑and‑ball” pattern.  
 - **Conv3 Activations**  
   ![Conv3 Activations](Media/conv3_activations.png)
-
-**Filter Evolution**  
-![Filter Evolution](Media/filter_evolution.gif)
+  By the third layer (8×8 maps), filters identify whole game‑state elements:  
+  - Channel 39: a “brick‑field detector” lighting up all remaining bricks.  
+  - Channel 48: a pure top‑row monitor (status of bricks).  
+  - Channel 13: a “brick‑and‑ball co‑occurrence” filter.  
+  - Channel 31: a “critical play area” focus on paddle/ball only. 
 
 **Saliency Maps**  
 ![Saliency Overlay](Media/saliency_overlay.gif)
