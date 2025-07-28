@@ -46,9 +46,9 @@ This platform enables you to:
   - [Checkpoint System](#checkpoint-system)
   - [Resume Training](#resume-training)
 - [Usage Examples](#usage-examples)
-  - [Training](#usage-examples-training)
-  - [Playing](#usage-examples-playing)
-  - [Visualization](#usage-examples-visualization)
+  - [Training](#training)
+  - [Playing](#playing)
+  - [Visualization](#visualization)
 - [Advanced Usage](#advanced-usage)
   - [Custom Game Configuration](#custom-game-configuration)
 
