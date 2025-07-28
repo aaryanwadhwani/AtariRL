@@ -240,22 +240,50 @@ proj/
 
 The system supports all Atari games available in Gymnasium, including:
 
-1. Asteroids            2. BeamRider            3. Boxing
-4. Breakout             5. ChopperCommand       6. CrazyClimber
-7. DemonAttack          8. DoubleDunk           9. Enduro
-10. FishingDerby        11. Freeway             12. Frostbite
-13. Gopher              14. Gravitar            15. IceHockey
-16. Jamesbond           17. Kangaroo            18. Krull
-19. KungFuMaster        20. MontezumaRevenge    21. MsPacman
-22. NameThisGame        23. Phoenix             24. Pitfall
-25. Pong                26. Pong                27. PrivateEye
-28. Qbert               29. Qbert               30. Riverraid
-31. RoadRunner          32. Robotank            33. Seaquest
-34. Skiing              35. Solaris             36. SpaceInvaders
-37. StarGunner          38. Tennis              39. TimePilot
-40. Tutankham           41. UpNDown             42. Venture
-43. VideoPinball        44. WizardOfWor         45. YarsRevenge
-46. Zaxxon
+- Asteroids
+- BeamRider
+- Boxing
+- Breakout
+- ChopperCommand
+- CrazyClimber
+- DemonAttack
+- DoubleDunk
+- Enduro
+- FishingDerby
+- Freeway
+- Frostbite
+- Gopher
+- Gravitar
+- IceHockey
+- Jamesbond
+- Kangaroo
+- Krull
+- KungFuMaster
+- MontezumaRevenge
+- MsPacman
+- NameThisGame
+- Phoenix
+- Pitfall
+- Pong
+- PrivateEye
+- Qbert
+- Riverraid
+- RoadRunner
+- Robotank
+- Seaquest
+- Skiing
+- Solaris
+- SpaceInvaders
+- StarGunner
+- Tennis
+- TimePilot
+- Tutankham
+- UpNDown
+- Venture
+- VideoPinball
+- WizardOfWor
+- YarsRevenge
+- Zaxxon
 
 ## Configuration
 
