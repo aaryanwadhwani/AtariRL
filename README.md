@@ -155,6 +155,8 @@ The training process generates various visualizations in the `Media/` directory:
 **Filter Evolution**  
 ![Filter Evolution](Media/filter_evolution.gif)
 
+This GIF stitches together conv1 filters from checkpoints at 1 K, 2 K, … up to your final epoch (5 K here). Watch as the kernels morph from static noise into crisp edge‑ and blob‑detectors.  
+
 **Layer Activations**  
 - **Conv1 Activations**  
   ![Conv1 Activations](Media/conv1_activations.png)
@@ -180,6 +182,8 @@ The training process generates various visualizations in the `Media/` directory:
 
 **Saliency Maps**  
 ![Saliency Overlay](Media/saliency_overlay.gif)
+
+This GIF overlays a heatmap onto the preprocessed game frames (upsampled for visibility). Bright regions in the heatmap are the pixels that most influence the agent’s chosen action across the models.  
 
 #### Model Export
 
