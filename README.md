@@ -157,13 +157,22 @@ The training process generates various visualizations in the `Media/` directory:
 
 #### Neural Network Analysis
 
-- **Filter Visualization**: [Breakout_conv1_filters.png](Media/Breakout_conv1_filters.png) - Shows learned features in the first convolutional layer
-- **Layer Activations**:
-  - [conv1_activations.png](Media/conv1_activations.png) - First layer activations
-  - [conv2_activations.png](Media/conv2_activations.png) - Second layer activations
-  - [conv3_activations.png](Media/conv3_activations.png) - Third layer activations
-- **Filter Evolution**: [filter_evolution.gif](Media/filter_evolution.gif) - Animation showing how filters evolve during training
-- **Saliency Maps**: [saliency_overlay.gif](Media/saliency_overlay.gif) - Shows what the model focuses on during gameplay
+**Filter Visualization**  
+![Conv1 Filters](Media/Breakout_conv1_filters.png)
+
+**Layer Activations**  
+- **Conv1 Activations**  
+  ![Conv1 Activations](Media/conv1_activations.png)  
+- **Conv2 Activations**  
+  ![Conv2 Activations](Media/conv2_activations.png)  
+- **Conv3 Activations**  
+  ![Conv3 Activations](Media/conv3_activations.png)
+
+**Filter Evolution**  
+![Filter Evolution](Media/filter_evolution.gif)
+
+**Saliency Maps**  
+![Saliency Overlay](Media/saliency_overlay.gif)
 
 #### Model Export
 
@@ -173,14 +182,15 @@ The training process generates various visualizations in the `Media/` directory:
 
 Watch the AI learn and improve through training:
 
-- **[Human Player](Media/human.mp4)** - Human gameplay for comparison
-- **[Model 1k Epochs](Media/model_1k.mp4)** - AI after 1,000 training epochs
-- **[Model 5k Epochs](Media/model_5k.mp4)** - AI after 5,000 training epochs
+**Human Player Demo**  
+![Human](Media/human.gif)
 
-**Training Progress Analysis:**
-- **1k Epochs**: Basic paddle movement, some strategic play
-- **5k Epochs**: Advanced strategies, consistent ball tracking, optimal break patterns
-- **Human vs AI**: Compare human intuition vs learned AI behavior
+**Model at 1 K Epochs**  
+![AI At 1k Epoch](Media/model_1k.gif)
+
+**Model at 5 K Epochs**  
+![AI At 5k Epoch](Media/model_5k.gif)
+
 
 
 ## Project Structure
