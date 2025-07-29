@@ -203,6 +203,8 @@ Watch the AI learn and improve through training:
 ![AI At 5k Epoch](Media/model_5k.gif)
 
 
+NOTE: 5000 epochs was chosen due to my system. It IS better suited to train the model for a much longer time for better scores. 
+
 
 ## Project Structure
 
